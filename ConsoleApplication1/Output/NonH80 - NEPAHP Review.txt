@@ -1,0 +1,257 @@
+BEGIN TRANSACTION
+
+-- commit
+-- rollback
+USE GRM
+GO
+
+--set all the id's with newid() 
+
+-- select newid() 
+
+
+DECLARE @HeaderDefinitionId UNIQUEIDENTIFIER SET @HeaderDefinitionId = '4caa5597-dcba-4486-9976-ff8c6212a285'
+DECLARE @ReviewDefinitionId UNIQUEIDENTIFIER SET @ReviewDefinitionId = 'f06d377a-9f56-40f1-9a23-ecf89cc9fc03'
+--[DefinitionIdentifier] should be same as [ReviewDefinitionIdentifier] for tracking purpose
+
+DECLARE @RelReviewDefinitionEntityTypeId UNIQUEIDENTIFIER SET @RelReviewDefinitionEntityTypeId = '3cc50ba0-473a-41a8-858c-5b397a432141'
+DECLARE @InstantiationConditionId UNIQUEIDENTIFIER SET @InstantiationConditionId = 'e9dc63ef-5c05-4e13-a2ac-4955aeb2cea4'
+DECLARE @FieldDefinitionId1 UNIQUEIDENTIFIER SET @FieldDefinitionId1 = '8e88b51c-7d47-4d1d-850a-ab1e8f3c4f04'
+DECLARE @FieldDefinitionId2 UNIQUEIDENTIFIER SET @FieldDefinitionId2 = 'f3d4253d-309b-4860-9cc7-f6161c7e097b'
+DECLARE @FieldDefinitionId3 UNIQUEIDENTIFIER SET @FieldDefinitionId3 = '461854e1-fb40-4acf-875b-a07b0b914dd0'
+DECLARE @FieldDefinitionId4 UNIQUEIDENTIFIER SET @FieldDefinitionId4 = '9fcbd5ca-3077-4f6e-8be2-38866140087d'
+DECLARE @FieldDefinitionId5 UNIQUEIDENTIFIER SET @FieldDefinitionId5 = '8e415a7e-191f-4ac1-8c66-7e8c2d0f975c'
+DECLARE @FieldDefinitionId6 UNIQUEIDENTIFIER SET @FieldDefinitionId6 = '302fc6c1-db39-4641-9a88-473d29da221d'
+DECLARE @FieldDefinitionId7 UNIQUEIDENTIFIER SET @FieldDefinitionId7 = 'b1a72d83-6f56-473c-89a0-4f55c5d6558b'
+DECLARE @FieldDefinitionId8 UNIQUEIDENTIFIER SET @FieldDefinitionId8 = 'ecf5ed72-0dee-4c18-9ca5-ec162f1bba12'
+DECLARE @FieldDefinitionId9 UNIQUEIDENTIFIER SET @FieldDefinitionId9 = 'f406d3fd-c599-44e7-81d5-63e1252b85f2'
+DECLARE @FieldDefinitionId10 UNIQUEIDENTIFIER SET @FieldDefinitionId10 = '6e36d150-bb5d-41e0-8b24-39d2cf8e87b6'
+DECLARE @FieldDefinitionId11 UNIQUEIDENTIFIER SET @FieldDefinitionId11 = 'e92d7a92-cf91-4c16-b6bc-b049a518d5aa'
+DECLARE @FieldDefinitionId12 UNIQUEIDENTIFIER SET @FieldDefinitionId12 = 'f3ad357e-0788-490e-96a7-68893481bc28'
+DECLARE @FieldDefinitionId13 UNIQUEIDENTIFIER SET @FieldDefinitionId13 = 'da5f8869-0cd7-4c54-9c87-6afb0bc283cc'
+DECLARE @FieldDefinitionId14 UNIQUEIDENTIFIER SET @FieldDefinitionId14 = '4aaa11cc-3fd9-43f4-9082-1c8585ced7f2'
+DECLARE @FieldDefinitionId15 UNIQUEIDENTIFIER SET @FieldDefinitionId15 = '720d7485-d914-4f87-a4f9-64062c310966'
+DECLARE @FieldDefinitionId16 UNIQUEIDENTIFIER SET @FieldDefinitionId16 = 'ae85b6d0-f3e2-486f-8599-72d404dd96c6'
+DECLARE @FieldDefinitionId17 UNIQUEIDENTIFIER SET @FieldDefinitionId17 = 'b3a7170b-7b95-459e-a0eb-a804f38d4e3f'
+DECLARE @FieldDefinitionId18 UNIQUEIDENTIFIER SET @FieldDefinitionId18 = '5bfe97fe-d406-4923-ac64-33c36e77dc08'
+DECLARE @FieldDefinitionId19 UNIQUEIDENTIFIER SET @FieldDefinitionId19 = '100edf77-b842-46ba-808e-7a3ab493d98b'
+DECLARE @FieldDefinitionId20 UNIQUEIDENTIFIER SET @FieldDefinitionId20 = '2987ad30-c976-456e-a6f3-cba96a05dd1b'
+DECLARE @FieldDefinitionId21 UNIQUEIDENTIFIER SET @FieldDefinitionId21 = '32bfb9c9-c79d-4cca-ae88-6b1eeb5df5cc'
+DECLARE @FieldDefinitionId22 UNIQUEIDENTIFIER SET @FieldDefinitionId22 = '7b0d057a-0a15-4be5-91da-fb8037cfd611'
+DECLARE @FieldDefinitionId23 UNIQUEIDENTIFIER SET @FieldDefinitionId23 = 'f34c8136-2deb-4a7a-b5bb-53b9251705ae'
+DECLARE @FieldDefinitionId24 UNIQUEIDENTIFIER SET @FieldDefinitionId24 = 'c9bd257a-1cd0-4634-ae29-0946afa5f2bc'
+DECLARE @FieldDefinitionId25 UNIQUEIDENTIFIER SET @FieldDefinitionId25 = '7a51e176-881a-41d6-9c0e-9be21be75329'
+DECLARE @FieldDefinitionId26 UNIQUEIDENTIFIER SET @FieldDefinitionId26 = 'ff30c8d1-23e0-487f-856d-1701b114b17c'
+DECLARE @FieldDefinitionId27 UNIQUEIDENTIFIER SET @FieldDefinitionId27 = 'dd1cc27a-a14e-4769-9ec6-81b267448e8d'
+DECLARE @FieldDefinitionId28 UNIQUEIDENTIFIER SET @FieldDefinitionId28 = '0c4f4253-31dd-4836-83aa-25b004bc0641'
+DECLARE @PrimaryObjectFieldId UNIQUEIDENTIFIER SET @PrimaryObjectFieldId = '49d34fd4-ab35-4834-a4cc-db918a1281a4'
+DECLARE @LinkDefinitionId1 UNIQUEIDENTIFIER SET @LinkDefinitionId1 = '5644cb63-1b5b-43d8-b7f7-eb9ddce08362'
+DECLARE @LinkDefinitionId2 UNIQUEIDENTIFIER SET @LinkDefinitionId2 = '60af9ab4-69f6-4ede-8f74-f63d8f80fbe0'
+DECLARE @LinkDefinitionId3 UNIQUEIDENTIFIER SET @LinkDefinitionId3 = 'c1b4d91d-b87a-45bf-b2dc-4007c2197b5e'
+DECLARE @LinkDefinitionId4 UNIQUEIDENTIFIER SET @LinkDefinitionId4 = 'f2f82a07-25f7-44e5-bf87-cf839cf1bc3b'
+DECLARE @LinkDefinitionId5 UNIQUEIDENTIFIER SET @LinkDefinitionId5 = '226aa978-e128-4c6f-9b47-89011d633a2f'
+DECLARE @LinkDefinitionId6 UNIQUEIDENTIFIER SET @LinkDefinitionId6 = '81597706-25ab-4f9e-972a-8bcd15723bc4'
+DECLARE @LinkDefinitionId7 UNIQUEIDENTIFIER SET @LinkDefinitionId7 = '46d46041-6f66-4bcd-8182-4e3018e845d1'
+DECLARE @LinkGroupId1 UNIQUEIDENTIFIER SET @LinkGroupId1 = '8c9c19ba-ef92-40d3-928b-9f85d7181c7c'
+DECLARE @LinkGroupId_DefinitionId1 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId1 = '20febc70-18f1-4858-9575-df16b065507b'
+DECLARE @LinkGroupId_DefinitionId2 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId2 = '3d2c0243-8828-47ef-9ece-0af4445dfc3e'
+DECLARE @LinkGroupId_DefinitionId3 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId3 = '994fd64d-be93-4bae-b275-3a717cbdfd8d'
+DECLARE @LinkGroupId_DefinitionId4 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId4 = 'f912b678-5eb1-4a27-ae14-d03bf4068724'
+DECLARE @LinkGroupId_DefinitionId5 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId5 = '01434ca5-e938-473c-aeb4-39ca3b8a3f4d'
+DECLARE @LinkGroupId_DefinitionId6 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId6 = '83fe608a-4092-4d44-bb72-56ed94078f8a'
+DECLARE @LinkGroupId_DefinitionId7 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId7 = '3c04c90a-0eb7-493f-ab1a-624a58d8f82d'
+DECLARE @ChecklistDefinitionId UNIQUEIDENTIFIER SET @ChecklistDefinitionId = 'efbf6f3c-f9ed-40d5-bc99-76ce98b8ba42'
+DECLARE @WorkflowAPIId UNIQUEIDENTIFIER SET @WorkflowAPIId = 'f1d3b4ba-ffa2-4672-b2fa-2cd47af1152b' 
+DECLARE @StepDefinitionId1 UNIQUEIDENTIFIER SET @StepDefinitionId1 = 'b59ae066-909e-4c6c-aec7-4dcfd66af659'
+DECLARE @StepDefinitionId2 UNIQUEIDENTIFIER SET @StepDefinitionId2 = '160355a6-a068-4b98-9fa1-39f272a7dadf'
+DECLARE @StepDefinitionId3 UNIQUEIDENTIFIER SET @StepDefinitionId3 = '43d8047b-06b8-4bd1-89d7-cf5eaa71366d'
+DECLARE @StepDefinitionId4 UNIQUEIDENTIFIER SET @StepDefinitionId4 = '9c2498ce-de6b-436a-a5d8-3cbc5e0e5816'
+DECLARE @DisplayName varchar(50) SET @DisplayName = ''
+DECLARE @InstantiationConditionXml xml SET @InstantiationConditionXml = '<cRule name=" vCode="AND" pass="YES">
+	<sRule id="FundingCycleId" vCode="EQ" CompareValue="856D0F23-615C-4BBB-B660-6B01FC8B9477"/>
+	<sRule id="ApplicationCEStatusCode" vCode="EQ" CompareValue="3"/>
+	<sRule id="ApplicationCEDecisionCode" vCode="EQ" CompareValue="1"/>
+	<sRule id="Year1OneTimeBudgetTotal" vCode="GT" CompareValue="0"/>
+</cRule>'
+DECLARE @Checklistxml xml SET @Checklistxml = ''
+DECLARE @ValidationXml xml SET @ValidationXml = ''
+
+INSERT INTO [GRM_RVW_Definition_P] ([ReviewDefinitionId],[Name],[Description],[ReviewTypeCode],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@ReviewDefinitionId,'NEPA/HP Review',@DisplayName,1,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_Definition_LU_GRM_AET_EntityType_R] ([RelReviewDefinitionEntityTypeId],[InstantiationConditionEvaluator],[EntityEvaluator],[Description],[ReviewDefinitionId],[AssociatedEntityTypeCode],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@RelReviewDefinitionEntityTypeId,'REISys.GRMN.Services,REISys.GRMN.Services.AET.InstantiationConditionEvaluator','REISys.GRMN.Services,REISys.GRMN.Services.AET.EntityIdsEvaluator',@DisplayName,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_AET_InstantiationCondition_P] ([InstantiationConditionId],[InstantiationConditionXml],[Description],[RelReviewDefinitionEntityTypeId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@InstantiationConditionId,@InstantiationConditionXml,@DisplayName,@RelReviewDefinitionEntityTypeId,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId18,@ReviewDefinitionId,'DeliverableId',NULL,0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId2,@ReviewDefinitionId,'ApplicationTrackingNumber','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId19,@ReviewDefinitionId,'Project.ProjectTitle','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId3,@ReviewDefinitionId,'Year1OneTimeBudgetTotal','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId12,@ReviewDefinitionId,'Project.ProjectId','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId7,@ReviewDefinitionId,'Project','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId4,@ReviewDefinitionId,'ApplicationTypeCode','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId15,@ReviewDefinitionId,'ApplicationStatusCode',NULL,0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId13,@ReviewDefinitionId,'Project.ProjectTypeCode','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId1,@ReviewDefinitionId,'ApplicantName','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId25,@ReviewDefinitionId,'ApplicantCity','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId10,@ReviewDefinitionId,'PreviousApplicationId','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId14,@ReviewDefinitionId,'ProjectName','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId27,@ReviewDefinitionId,'ApplicantStateValue','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId26,@ReviewDefinitionId,'Project.ProjectTrackingNo','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId17,@ReviewDefinitionId,'ApplicationId','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId9,@ReviewDefinitionId,'GrantId',NULL,0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId11,@ReviewDefinitionId,'FundingCycleName','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId8,@ReviewDefinitionId,'ApplicantState','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId23,@ReviewDefinitionId,'ApplicationVersionNo','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId24,@ReviewDefinitionId,'Project.EHBApplicationId','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId21,@ReviewDefinitionId,'SubmissionStatus','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId6,@ReviewDefinitionId,'Project.federalAmountRequested','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId16,@ReviewDefinitionId,'AnnouncementNumber','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId5,@ReviewDefinitionId,'Project.ProjectType','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId22,@ReviewDefinitionId,'FundingCycleId','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId20,@ReviewDefinitionId,'ActivityCode','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId28,@ReviewDefinitionId,'Project.ProjectVersionNo','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_AET_PrimaryObjectField_P] ([PrimaryObjectFieldId],[PrimaryObjectFieldDefinitionId],[ParentObjectFieldDefinitionId],[PrimaryObjectVersionFieldDefinitionId],[ParentObjectVersionFieldDefinitionId],[RelReviewDefinitionEntityTypeId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[Description],[PrimaryObjectCoreIdentifierFieldDefinitionId],[PrimaryHeaderDefinitionId],[ParentHeaderDefinitionId],[ActionHistoryFieldDefinitionId],[DefaultAssgmtResourceValueFieldDefinitionId],[DefaultAssgmtResourceTypeCodeFieldDefinitionId]) 
+VALUES(@PrimaryObjectFieldId,@FieldDefinitionId12,NULL,@FieldDefinitionId23,NULL,@RelReviewDefinitionEntityTypeId,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),@DisplayName,@FieldDefinitionId26,NULL,NULL,NULL,NULL,NULL) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId3,NULL,'ActionHistory','Action History','ED891AFA-E28D-4D63-BBAE-EB3FD594F958','rv={% Review %}&rtc=169&plc=3&hctrl=/UserControls/GenericHeaderControl.ascx&hctrlparam=StepInst={% Step %},disStat=false',1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId5,NULL,'NAP-V Application','Application','F9FB9F38-8018-4C59-80B5-899DE2FBD4EB','applicationid={{ ApplicationId }}&hv=Y&VersionId=0&FA=0&CallingObject=Review&wndMode=1',1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId2,NULL,'ApplicationFolder','Application Folder','EAB276D7-F93B-43A4-A09F-BDF74B5A8900',NULL,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId6,NULL,'NEPA/HP Checklist','NEPA/HP Checklist','FFDACBC0-56F4-443F-9E51-B4A85FF61C52',NULL,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId1,NULL,'A/E Readonly Review','A/E Checklist','0B4B21A8-0E3E-41AF-8583-6D249B92C7EE','rvInst={% Review A/E Review %}',1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId7,NULL,'Terms and Conditions','Terms and Conditions','3235E0B1-4275-4929-A623-51EBB19C9B7D',NULL,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId4,NULL,'GAR Readonly Review','GAR Checklist','0B4B21A8-0E3E-41AF-8583-6D249B92C7EE','rvInst={% Review GAR %}',1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkGroup_P] ([LinkGroupId],[Name],[UseResourceFlag],[DisplayHtml],[CSSFile],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkGroupId1,@DisplayName,1,NULL,NULL,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES(@LinkGroupId_DefinitionId4,@LinkGroupId1,@LinkDefinitionId1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,50) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES(@LinkGroupId_DefinitionId7,@LinkGroupId1,@LinkDefinitionId6,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,40) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES(@LinkGroupId_DefinitionId1,@LinkGroupId1,@LinkDefinitionId4,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,45) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES(@LinkGroupId_DefinitionId2,@LinkGroupId1,@LinkDefinitionId3,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,20) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES(@LinkGroupId_DefinitionId3,@LinkGroupId1,@LinkDefinitionId2,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,30) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES(@LinkGroupId_DefinitionId6,@LinkGroupId1,@LinkDefinitionId7,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,60) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES(@LinkGroupId_DefinitionId5,@LinkGroupId1,@LinkDefinitionId5,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,10) 
+
+INSERT INTO [ChecklistDefinition] ([ChecklistDefinitionId],[Version],[XSLTPath],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[ChecklistXML],[Description],[ReadonlyXSLTPath]) 
+VALUES(@ChecklistDefinitionId,1,'PFIPostAwardNEPAReviewChecklist/xslt','15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),@Checklistxml,@DisplayName,'PFIPostAwardNEPAReviewChecklist/xslt') 
+
+INSERT INTO [GRM_RVW_WorkFlowAPI_P] ([WorkflowAPIID],[ReviewDefinitionId],[DLLAssembly],[WorkflowDefinitionId],[RelatedObjectTypeCode],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@WorkflowAPIId,@ReviewDefinitionId,'REISys.GRMN.Plugin.NAPWorkflow,REISys.GRMN.Plugin.NAPWorkflow.GenericWorkflow.PFIPreAwardWorkflow','201E6525-AFE0-48E4-A21F-6C6FCD9BC01A',169,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_StepDefinition_P] ([StepDefinitionId],[ReviewDefinitionId],[Name],[EHBRoleId],[EHBTaskTypeCode],[TaskSLCOREPredefinedPageId],[COREPredefinedPageId],[ChecklistDefinitionId],[ChecklistVersionId],[CSSFile],[SharedDecisionNumber],[SharedCommentNumber],[SharedChecklistNumber],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[PageActionGroupId],[DecisionGroupId],[LinkGroupId],[ValidationXml],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[TaskSLTitle],[ReviewTitle],[HeaderDefinitionId],[EHBPrivilegeId],[AuthorizationXML],[DisableUserSelectionFlag],[ConfirmPageLayoutNoteText],[ConfirmPageLayoutConfirmText],[HideRequiredCommentMessageFlag]) 
+VALUES(@StepDefinitionId1,@ReviewDefinitionId,@DisplayName + ' NEPA/HP Assign Analyst',143,681,'E8424B68-016E-4F8C-961A-DB84B8AA6810','FB331C80-51DF-49B1-8FCB-48666CBD3FCA',NULL,NULL,NULL,NULL,NULL,NULL,1,@ReviewDefinitionId,1,'AFA38D6F-2867-4A1A-A2BC-EB1D18CF4117',NULL,@LinkGroupId1,NULL,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'NEPA/HP Review - Assign Checklist','NEPA/HP Review - Assign Checklist',@HeaderDefinitionId,NULL,NULL,NULL,NULL,NULL,0) 
+
+INSERT INTO [GRM_RVW_StepDefinition_P] ([StepDefinitionId],[ReviewDefinitionId],[Name],[EHBRoleId],[EHBTaskTypeCode],[TaskSLCOREPredefinedPageId],[COREPredefinedPageId],[ChecklistDefinitionId],[ChecklistVersionId],[CSSFile],[SharedDecisionNumber],[SharedCommentNumber],[SharedChecklistNumber],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[PageActionGroupId],[DecisionGroupId],[LinkGroupId],[ValidationXml],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[TaskSLTitle],[ReviewTitle],[HeaderDefinitionId],[EHBPrivilegeId],[AuthorizationXML],[DisableUserSelectionFlag],[ConfirmPageLayoutNoteText],[ConfirmPageLayoutConfirmText],[HideRequiredCommentMessageFlag]) 
+VALUES(@StepDefinitionId2,@ReviewDefinitionId,@DisplayName + ' NEPA/HP Analyst Review',143,682,'E8424B68-016E-4F8C-961A-DB84B8AA6810','BF14D57F-D2F8-4B84-B47F-AC6628B808EE',@ChecklistDefinitionId,1,NULL,1,2,1,1,@ReviewDefinitionId,1,'AFA38D6F-2867-4A1A-A2BC-EB1D18CF4117','862B61EA-B2A8-4225-8A02-24F13683FA5F',@LinkGroupId1,@ValidationXml,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'NEPA/HP Review - Prepare Checklist','NEPA/HP Review - Checklist',@HeaderDefinitionId,NULL,NULL,NULL,NULL,NULL,0) 
+
+INSERT INTO [GRM_RVW_StepDefinition_P] ([StepDefinitionId],[ReviewDefinitionId],[Name],[EHBRoleId],[EHBTaskTypeCode],[TaskSLCOREPredefinedPageId],[COREPredefinedPageId],[ChecklistDefinitionId],[ChecklistVersionId],[CSSFile],[SharedDecisionNumber],[SharedCommentNumber],[SharedChecklistNumber],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[PageActionGroupId],[DecisionGroupId],[LinkGroupId],[ValidationXml],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[TaskSLTitle],[ReviewTitle],[HeaderDefinitionId],[EHBPrivilegeId],[AuthorizationXML],[DisableUserSelectionFlag],[ConfirmPageLayoutNoteText],[ConfirmPageLayoutConfirmText],[HideRequiredCommentMessageFlag]) 
+VALUES(@StepDefinitionId3,@ReviewDefinitionId,@DisplayName + ' NEPA/HP Request Change',143,683,'E8424B68-016E-4F8C-961A-DB84B8AA6810','BF14D57F-D2F8-4B84-B47F-AC6628B808EE',@ChecklistDefinitionId,1,NULL,1,1,1,1,@ReviewDefinitionId,1,'AFA38D6F-2867-4A1A-A2BC-EB1D18CF4117','862B61EA-B2A8-4225-8A02-24F13683FA5F',@LinkGroupId1,@ValidationXml,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'NEPA/HP Review - Change Request','NEPA/HP Review - Checklist',@HeaderDefinitionId,NULL,NULL,NULL,NULL,NULL,0) 
+
+INSERT INTO [GRM_RVW_StepDefinition_P] ([StepDefinitionId],[ReviewDefinitionId],[Name],[EHBRoleId],[EHBTaskTypeCode],[TaskSLCOREPredefinedPageId],[COREPredefinedPageId],[ChecklistDefinitionId],[ChecklistVersionId],[CSSFile],[SharedDecisionNumber],[SharedCommentNumber],[SharedChecklistNumber],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[PageActionGroupId],[DecisionGroupId],[LinkGroupId],[ValidationXml],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[TaskSLTitle],[ReviewTitle],[HeaderDefinitionId],[EHBPrivilegeId],[AuthorizationXML],[DisableUserSelectionFlag],[ConfirmPageLayoutNoteText],[ConfirmPageLayoutConfirmText],[HideRequiredCommentMessageFlag]) 
+VALUES(@StepDefinitionId4,@ReviewDefinitionId,@DisplayName + ' NEPA/HP PO Review',142,684,'E8424B68-016E-4F8C-961A-DB84B8AA6810','BF14D57F-D2F8-4B84-B47F-AC6628B808EE',@ChecklistDefinitionId,1,NULL,1,3,1,1,@ReviewDefinitionId,1,'8F4C55DE-F311-4927-B9D3-E62983359964','862B61EA-B2A8-4225-8A02-24F13683FA5F',@LinkGroupId1,@ValidationXml,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'NEPA/HP Review - Prepare Checklist','NEPA/HP Review - Checklist',@HeaderDefinitionId,NULL,NULL,NULL,NULL,NULL,0) 
+
+INSERT INTO [GRM_RVW_HeaderDefinition_P] ([HeaderDefinitionId],[Name],[DisplayHtml],[CSSFile],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[HeaderTitle]) 
+VALUES(@HeaderDefinitionId,@DisplayName,'<table width="100%">
+	<tr>
+		<td>
+			<b>Application Tracking Number:</b> {{ApplicationTrackingNumber}}</td>
+		<td>
+			<b>Project Tracking Number:</b> {% Field Project.ProjectTrackingNo %}</td>
+		<td>
+			<b>Project Type:</b> {% Field Project.ProjectType %}</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Announcement Number:</b> {{AnnouncementNumber}}</td>
+		<td>
+			<b>Project Name:</b> {% Field Project.ProjectTitle %}</td>
+		<td>
+			<b>State:</b> {{ApplicantStateValue}}</td>
+	</tr>
+</table>',NULL,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'{{ApplicationTrackingNumber}}: {{ApplicantName}}') 
+

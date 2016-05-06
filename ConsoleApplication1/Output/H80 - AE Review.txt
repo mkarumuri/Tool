@@ -1,0 +1,679 @@
+BEGIN TRANSACTION
+
+-- commit
+-- rollback
+USE GRM
+Go
+
+--set all the id's with newid()
+-- select newid()
+
+DECLARE @HeaderDefinitionId UNIQUEIDENTIFIER SET @HeaderDefinitionId = 'b2068b50-a709-4b40-b202-9b948c927f79'
+DECLARE @ReviewDefinitionId UNIQUEIDENTIFIER SET @ReviewDefinitionId = '8aa03460-635a-466f-85b5-535b06d5627b'
+--[DefinitionIdentifier] should be same as [ReviewDefinitionIdentifier] for tracking purpose
+
+DECLARE @RelReviewDefinitionEntityTypeId UNIQUEIDENTIFIER SET @RelReviewDefinitionEntityTypeId = '762c9c21-8001-492d-99ab-9918ef811730'
+DECLARE @InstantiationConditionId UNIQUEIDENTIFIER SET @InstantiationConditionId = 'ac84705e-019d-4ffe-abd3-a59ac3072d51'
+DECLARE @FieldDefinitionId1 UNIQUEIDENTIFIER SET @FieldDefinitionId1 = '50d43a8a-79b3-4216-8439-1a94023b7010'
+DECLARE @FieldDefinitionId2 UNIQUEIDENTIFIER SET @FieldDefinitionId2 = '097b3bd6-ae02-4381-8813-98686d32104c'
+DECLARE @FieldDefinitionId3 UNIQUEIDENTIFIER SET @FieldDefinitionId3 = 'b398ad5c-44db-4191-b5f6-5c339c8a8140'
+DECLARE @FieldDefinitionId4 UNIQUEIDENTIFIER SET @FieldDefinitionId4 = '7032b4b1-30d8-40df-bd89-f9de6010a9d6'
+DECLARE @FieldDefinitionId5 UNIQUEIDENTIFIER SET @FieldDefinitionId5 = '3d20121f-ab03-4665-9275-a63a32276b41'
+DECLARE @FieldDefinitionId6 UNIQUEIDENTIFIER SET @FieldDefinitionId6 = '137eaff1-691f-440b-b7c1-d77c2aec20e7'
+DECLARE @FieldDefinitionId7 UNIQUEIDENTIFIER SET @FieldDefinitionId7 = 'f1d630d5-c107-489e-b885-e31ad2716826'
+DECLARE @FieldDefinitionId8 UNIQUEIDENTIFIER SET @FieldDefinitionId8 = '02c73efd-7d80-4dae-9d47-220f32a90a21'
+DECLARE @FieldDefinitionId9 UNIQUEIDENTIFIER SET @FieldDefinitionId9 = 'bf762f45-20b9-4806-a842-a12a30cd9b67'
+DECLARE @FieldDefinitionId10 UNIQUEIDENTIFIER SET @FieldDefinitionId10 = '50df0607-7b6c-45ab-a12e-bf83cedb5452'
+DECLARE @FieldDefinitionId11 UNIQUEIDENTIFIER SET @FieldDefinitionId11 = 'a8fa631f-a716-4c73-9fdf-32fb9cb33996'
+DECLARE @FieldDefinitionId12 UNIQUEIDENTIFIER SET @FieldDefinitionId12 = 'f7ec44e9-c40f-493c-ae72-e898fc36fc0a'
+DECLARE @FieldDefinitionId13 UNIQUEIDENTIFIER SET @FieldDefinitionId13 = '9fc4abfa-81ae-4945-b528-6a0ad0325736'
+DECLARE @FieldDefinitionId14 UNIQUEIDENTIFIER SET @FieldDefinitionId14 = 'f31f0bb7-c7b8-47cb-a92d-6a8e7bd75a55'
+DECLARE @FieldDefinitionId15 UNIQUEIDENTIFIER SET @FieldDefinitionId15 = 'e2fdbee8-cec6-49b4-bd45-0dc06aa0bc26'
+DECLARE @FieldDefinitionId16 UNIQUEIDENTIFIER SET @FieldDefinitionId16 = '824b72c0-9339-4ae7-95cb-7e3416c20b77'
+DECLARE @FieldDefinitionId17 UNIQUEIDENTIFIER SET @FieldDefinitionId17 = '9317ce76-f193-40b9-a4e8-8c82cb2be118'
+DECLARE @FieldDefinitionId18 UNIQUEIDENTIFIER SET @FieldDefinitionId18 = '86bf7124-d188-4f34-adea-13780cb8986c'
+DECLARE @FieldDefinitionId19 UNIQUEIDENTIFIER SET @FieldDefinitionId19 = 'b8e4f354-c9a9-4e8d-9497-9e1183f727f6'
+DECLARE @FieldDefinitionId20 UNIQUEIDENTIFIER SET @FieldDefinitionId20 = '5ce602f0-26c9-4a3b-a3b4-84cd25d26d8b'
+DECLARE @FieldDefinitionId21 UNIQUEIDENTIFIER SET @FieldDefinitionId21 = '7151513d-8f75-49f1-b849-86d3e94d36fb'
+DECLARE @FieldDefinitionId22 UNIQUEIDENTIFIER SET @FieldDefinitionId22 = '628e1ab6-e2bf-4b5c-962d-07a0936934b0'
+DECLARE @FieldDefinitionId23 UNIQUEIDENTIFIER SET @FieldDefinitionId23 = '92e7eee6-68fb-4907-8c52-4ce08e01ac82'
+DECLARE @FieldDefinitionId24 UNIQUEIDENTIFIER SET @FieldDefinitionId24 = '475fe07a-4c4f-4910-b87c-028843fab781'
+DECLARE @FieldDefinitionId25 UNIQUEIDENTIFIER SET @FieldDefinitionId25 = '41a0b4ea-83d7-4f55-a216-38be51cb0857'
+DECLARE @FieldDefinitionId26 UNIQUEIDENTIFIER SET @FieldDefinitionId26 = '5d63ce68-52cf-45f3-b5ff-89af3ab16989'
+DECLARE @FieldDefinitionId27 UNIQUEIDENTIFIER SET @FieldDefinitionId27 = '5cfa5f72-9cfc-46db-928c-8d8ba976851b'
+DECLARE @FieldDefinitionId28 UNIQUEIDENTIFIER SET @FieldDefinitionId28 = 'b7a48fb2-73ad-4e8a-b171-3406c8d0a6d5'
+DECLARE @PrimaryObjectFieldId UNIQUEIDENTIFIER SET @PrimaryObjectFieldId = '137f8c87-66b2-49cc-afc3-8063a54048cb'
+DECLARE @LinkDefinitionId1 UNIQUEIDENTIFIER SET @LinkDefinitionId1 = '09983ac6-4dbf-440c-ad22-c6bda60f0d5b'
+DECLARE @LinkDefinitionId2 UNIQUEIDENTIFIER SET @LinkDefinitionId2 = 'e04eaacd-2eaa-4d26-a921-14a057b4cce9'
+DECLARE @LinkDefinitionId3 UNIQUEIDENTIFIER SET @LinkDefinitionId3 = '74a1f582-27f9-4e4c-8b68-0812cdf2f26a'
+DECLARE @LinkDefinitionId4 UNIQUEIDENTIFIER SET @LinkDefinitionId4 = '68e1ca8a-d781-4078-95bb-63a191b4f250'
+DECLARE @LinkDefinitionId5 UNIQUEIDENTIFIER SET @LinkDefinitionId5 = '63566b49-d7e5-46e5-93f1-b1c9fdd4aada'
+DECLARE @LinkDefinitionId6 UNIQUEIDENTIFIER SET @LinkDefinitionId6 = '56efe844-5d6f-4c5c-8e50-1046e17f8a9c'
+DECLARE @LinkGroupId1 UNIQUEIDENTIFIER SET @LinkGroupId1 = '2f2cdedc-3e31-42c6-9367-7f8c9a0f1fe6'
+DECLARE @LinkGroupId_DefinitionId1 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId1 = '96631e9f-fce5-46aa-9477-c1b72da0b15d'
+DECLARE @LinkGroupId_DefinitionId2 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId2 = 'bcbf6d43-866b-4274-931c-51babb3e4d1a'
+DECLARE @LinkGroupId_DefinitionId3 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId3 = '16f24114-de58-4574-8e1c-e1abbcac02e4'
+DECLARE @LinkGroupId_DefinitionId4 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId4 = 'b62adcc0-b5ae-4aa8-bca9-d1bdb58044c5'
+DECLARE @LinkGroupId_DefinitionId5 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId5 = '88924bf9-88f0-4d8f-b141-8d0fa22313c0'
+DECLARE @LinkGroupId_DefinitionId6 UNIQUEIDENTIFIER SET @LinkGroupId_DefinitionId6 = 'e7d20806-3ac4-4f85-87f7-4b3762f96ff5'
+DECLARE @ChecklistDefinitionId UNIQUEIDENTIFIER SET @ChecklistDefinitionId = '98bf647c-727c-43bd-b6fc-a08d3424fe8c' 
+DECLARE @WorkflowAPIId UNIQUEIDENTIFIER SET @WorkflowAPIId = 'c206c7f6-ce53-46cc-b3ae-049b69e4f470'
+DECLARE @StepDefinitionId1 UNIQUEIDENTIFIER SET @StepDefinitionId1 = '09fdf64a-af93-44cd-b2b1-598b6ff13741'
+DECLARE @StepDefinitionId2 UNIQUEIDENTIFIER SET @StepDefinitionId2 = '23f908b6-f352-4cef-b2ce-80266c30b994'
+DECLARE @StepDefinitionId3 UNIQUEIDENTIFIER SET @StepDefinitionId3 = '39086476-8e9d-4c67-8b28-d2cb2367e503'
+DECLARE @StepDefinitionId4 UNIQUEIDENTIFIER SET @StepDefinitionId4 = '9e7cfc8c-c9fe-4bf2-a18d-df4f3a39fb49'
+DECLARE @DisplayName varchar(50) SET @DisplayName = ''
+DECLARE @InstantiationConditionXml xml SET @InstantiationConditionXml = '<cRule name=" vCode="AND" pass="YES">
+	<sRule id="FundingCycleId" vCode="EQ" CompareValue="856D0F23-615C-4BBB-B660-6B01FC8B9477"/>
+	<sRule id="ApplicationCEStatusCode" vCode="EQ" CompareValue="3"/>
+	<sRule id="ApplicationCEDecisionCode" vCode="EQ" CompareValue="1"/>
+	<sRule id="Year1OneTimeBudgetTotal" vCode="GT" CompareValue="0"/>
+</cRule>'
+DECLARE @Checklistxml VARCHAR(MAX) SET @Checklistxml = '<Checklist Description="OHSE_AE_ReviewChecklist">
+  <Questions>
+    <Question QuestionId="7F2D4CD2-F361-4796-8EEA-5C07F0324DC9" Description="Budget Analysis" Required="true" TableName="Header" />
+    <Question QuestionId="765B5BFB-E114-4E11-BA55-B58387E14C26" Description="1. Are the project costs consistently identified in the budget and budget justification sections? (i.e., fixed equipment is appropriately categorized as a construction cost)" Required="true">
+      <Fields>
+        <Field FieldId="39396845-7995-4C54-84E5-3737B427E07D" AnswerProperty="Checked" Control="rei:REIASPRadioButton" ValidationID="AEQ1">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ1" />
+            <Attribute Name="Name" Value="Yes" />
+            <Attribute Name="Text" Value="Yes" />
+          </Attributes>
+        </Field>
+        <Field FieldId="9DB6842B-3BBC-4559-BECE-66CBE5D25C9D" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ1" />
+            <Attribute Name="Name" Value="No" />
+            <Attribute Name="Text" Value="No" />
+          </Attributes>
+        </Field>
+        <Field FieldId="5DD3C0E5-8742-4980-ACD3-A9778FEC70F1" Description="If No, please provide comments" Control="rei:REIASPLabel" />
+        <Field FieldId="0015544A-011D-4E9B-9465-5727146FA9DA" AnswerProperty="Text" Control="rei:RichTextBoxView">
+          <Attributes>
+            <Attribute Name="TextMode" Value="MultiLine" />
+            <Attribute Name="DisplayCharacterCountLabel" Value="True" />
+            <Attribute Name="Rows" Value="5" />
+            <Attribute Name="MaxLength" Value="1000" />
+            <Attribute Name="ReplaceCarriageReturns" Value="false" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+    <Question QuestionId="6FB4D23C-B976-42CA-AC02-CC7E45909193" Description="2. Does the budget justification provide sufficient detail for all of the costs identified in the budget?" Required="true">
+      <Fields>
+        <Field FieldId="99A72289-6CFA-4525-B662-F6479E3EA5F0" AnswerProperty="Checked" Control="rei:REIASPRadioButton" ValidationID="AEQ2">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ2" />
+            <Attribute Name="Name" Value="Yes" />
+            <Attribute Name="Text" Value="Yes" />
+          </Attributes>
+        </Field>
+        <Field FieldId="F4860997-B6EF-48BB-B22E-F57A2AF375D7" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ2" />
+            <Attribute Name="Name" Value="No" />
+            <Attribute Name="Text" Value="No" />
+          </Attributes>
+        </Field>
+        <Field FieldId="832B502A-5C80-4640-920D-EF5B3A6EC698" Description="If No, please provide comments" Control="rei:REIASPLabel" />
+        <Field FieldId="45ED1B32-BC2F-410A-8118-DCB3995C08D4" AnswerProperty="Text" Control="rei:RichTextBoxView">
+          <Attributes>
+            <Attribute Name="TextMode" Value="MultiLine" />
+            <Attribute Name="DisplayCharacterCountLabel" Value="True" />
+            <Attribute Name="Rows" Value="5" />
+            <Attribute Name="MaxLength" Value="1000" />
+            <Attribute Name="ReplaceCarriageReturns" Value="false" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+    <Question QuestionId="1AE9050A-A1CD-4C43-8710-8C5F284A0F38" Description="3. Are the costs presented appropriately documented as 'allowable' or 'unallowable' per the program specifications?" Required="true">
+      <Fields>
+        <Field FieldId="E83E8BEC-C616-4050-A5C8-3E7CCCF69559" AnswerProperty="Checked" Control="rei:REIASPRadioButton" ValidationID="AEQ3">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ3" />
+            <Attribute Name="Name" Value="Yes" />
+            <Attribute Name="Text" Value="Yes" />
+          </Attributes>
+        </Field>
+        <Field FieldId="E3C74409-BC27-4A4D-9210-826A65A91509" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ3" />
+            <Attribute Name="Name" Value="No" />
+            <Attribute Name="Text" Value="No" />
+          </Attributes>
+        </Field>
+        <Field FieldId="5C487DBF-69D4-4E39-81CC-7FE1B7986175" Description="If No, please provide comments" Control="rei:REIASPLabel" />
+        <Field FieldId="5878F511-CBC5-47CF-B2B2-EDAD2F773715" AnswerProperty="Text" Control="rei:RichTextBoxView">
+          <Attributes>
+            <Attribute Name="TextMode" Value="MultiLine" />
+            <Attribute Name="DisplayCharacterCountLabel" Value="True" />
+            <Attribute Name="Rows" Value="5" />
+            <Attribute Name="MaxLength" Value="1000" />
+            <Attribute Name="ReplaceCarriageReturns" Value="false" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+    <Question QuestionId="50A0B15B-48E2-4AF5-8838-459E61AC6BC6" Description="4. Are the costs presented within the budget reasonable for the scope of the project presented within the narratives, schematic drawings, and site plan? " Required="true" TableName="Budget Analysis">
+      <Fields>
+        <Field FieldId="DAD84F03-8320-4AE0-8D30-AEB88701E2D9" AnswerProperty="Checked" Control="rei:REIASPRadioButton" ValidationID="AEQ4">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ4" />
+            <Attribute Name="Name" Value="Yes" />
+            <Attribute Name="Text" Value="Yes" />
+          </Attributes>
+        </Field>
+        <Field FieldId="05E20752-EFC6-4721-BCEC-AA2403916782" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ4" />
+            <Attribute Name="Name" Value="No" />
+            <Attribute Name="Text" Value="No" />
+          </Attributes>
+        </Field>
+        <Field FieldId="505597C7-0AB9-4308-ABE6-839ABD668894" Description="If No, please provide comments" Control="rei:REIASPLabel" />
+        <Field FieldId="A04B084D-9639-4722-B3D7-234EC256CB2A" AnswerProperty="Text" Control="rei:RichTextBoxView">
+          <Attributes>
+            <Attribute Name="TextMode" Value="MultiLine" />
+            <Attribute Name="DisplayCharacterCountLabel" Value="True" />
+            <Attribute Name="Rows" Value="5" />
+            <Attribute Name="MaxLength" Value="1000" />
+            <Attribute Name="ReplaceCarriageReturns" Value="false" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+    <Question QuestionId="E10E496A-856F-41C5-B1C2-C5E7C48B384C" Description="5. Did the applicant appropriately identify that only moveable equipment items will be purchased?" Required="true" TableName="Budget Analysis">
+      <Fields>
+        <Field FieldId="D169E50E-A702-40BA-8B64-58DDF257179C" AnswerProperty="Checked" Control="rei:REIASPRadioButton" ValidationID="AEQ5">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ5" />
+            <Attribute Name="Name" Value="Yes" />
+            <Attribute Name="Text" Value="Yes" />
+          </Attributes>
+        </Field>
+        <Field FieldId="284DC241-233B-4EC3-9F6A-9B753E95FBB5" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ5" />
+            <Attribute Name="Name" Value="No" />
+            <Attribute Name="Text" Value="No" />
+          </Attributes>
+        </Field>
+        <Field FieldId="B05DA83F-2C50-4A80-BB7A-832AAC0C7718" Description="If No, please provide comments" Control="rei:REIASPLabel" />
+        <Field FieldId="BC530CB2-8B30-4E67-8593-453D44D3B4D1" AnswerProperty="Text" Control="rei:RichTextBoxView">
+          <Attributes>
+            <Attribute Name="TextMode" Value="MultiLine" />
+            <Attribute Name="DisplayCharacterCountLabel" Value="True" />
+            <Attribute Name="Rows" Value="5" />
+            <Attribute Name="MaxLength" Value="1000" />
+            <Attribute Name="ReplaceCarriageReturns" Value="false" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+    <Question QuestionId="7D70455B-C0DC-46D6-B111-91F49F06D4A1" Description="Construction Schedule" Required="true" TableName="Header" />
+    <Question QuestionId="69392475-0913-41AC-936A-4521FFFA6BBD" Description="6. Is the schedule reasonable for the project scope and budget presented?  Will the proposed activities allow for the site(s) to be operational within 120 days of the award issuance?" Required="true" TableName="Construction Schedule">
+      <Fields>
+        <Field FieldId="9681B3E7-4303-4E7D-8106-9903AB261729" AnswerProperty="Checked" Control="rei:REIASPRadioButton" ValidationID="AEQ6">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ6" />
+            <Attribute Name="Name" Value="Yes" />
+            <Attribute Name="Text" Value="Yes" />
+          </Attributes>
+        </Field>
+        <Field FieldId="B22C60F1-B6EC-46F7-B283-0A5C3F80316A" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ6" />
+            <Attribute Name="Name" Value="No" />
+            <Attribute Name="Text" Value="No" />
+          </Attributes>
+        </Field>
+        <Field FieldId="1E7EEFB1-9CDA-48B5-8189-B66E923A5CA9" Description="If No, please provide comments" Control="rei:REIASPLabel" />
+        <Field FieldId="76759FDC-CAA5-4977-8CD4-4DC8460D2463" AnswerProperty="Text" Control="rei:RichTextBoxView">
+          <Attributes>
+            <Attribute Name="TextMode" Value="MultiLine" />
+            <Attribute Name="DisplayCharacterCountLabel" Value="True" />
+            <Attribute Name="Rows" Value="5" />
+            <Attribute Name="MaxLength" Value="1000" />
+            <Attribute Name="ReplaceCarriageReturns" Value="false" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+    <Question QuestionId="05137718-1776-485F-8E2A-8EF86D4DD0DD" Description="Construction Experience" Required="true" TableName="Header" />
+    <Question QuestionId="1EEA3181-AA86-423E-B891-6F8ED5320594" Description="7. Has the applicant demonstrated that an experienced construction management team is, or will be, in place to oversee the project? " Required="true">
+      <Fields>
+        <Field FieldId="AA9EE00F-29B4-47AB-BD5D-EF63C9F2156B" AnswerProperty="Checked" Control="rei:REIASPRadioButton" ValidationID="AEQ7">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ7" />
+            <Attribute Name="Name" Value="Yes" />
+            <Attribute Name="Text" Value="Yes" />
+          </Attributes>
+        </Field>
+        <Field FieldId="CA069FB5-9E56-4402-949E-51A164293D69" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ7" />
+            <Attribute Name="Name" Value="No" />
+            <Attribute Name="Text" Value="No" />
+          </Attributes>
+        </Field>
+        <Field FieldId="B9368F30-9C60-4C0E-A84B-03F0AC4D4220" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ7" />
+            <Attribute Name="Name" Value="N/A" />
+            <Attribute Name="Text" Value="N/A" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+    <Question QuestionId="97B5D012-4AEB-4987-99AA-50592E5A2974" Description="8. Has the applicant exhibited a sufficient knowledge of the construction process to allow for the project to be completed on time and within budget?" Required="true" TableName="Construction Experience">
+      <Fields>
+        <Field FieldId="A14E4AC6-222C-44E2-8BD0-997A5F5E1055" AnswerProperty="Checked" Control="rei:REIASPRadioButton" ValidationID="AEQ8">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ8" />
+            <Attribute Name="Name" Value="Yes" />
+            <Attribute Name="Text" Value="Yes" />
+          </Attributes>
+        </Field>
+        <Field FieldId="94869E4C-B073-47C0-8B16-884BA2DC7A75" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ8" />
+            <Attribute Name="Name" Value="No" />
+            <Attribute Name="Text" Value="No" />
+          </Attributes>
+        </Field>
+        <Field FieldId="43847CB6-F172-4EF8-BD8B-0F31F00E2EB7" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ8" />
+            <Attribute Name="Name" Value="N/A" />
+            <Attribute Name="Text" Value="N/A" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+    <Question QuestionId="2DBC1626-0441-4313-B6E5-56437BB7E170" Description="Project Scope" Required="true" TableName="Header" />
+    <Question QuestionId="75904167-5364-4906-9BF5-81034554CDF1" Description="9. Are the schematic drawings and site plan documentation sufficiently detailed and consistent with the project scope identified in the narrative?" Required="true" TableName="Project Scope">
+      <Fields>
+        <Field FieldId="BC3C044B-FD19-4DC1-B141-7492D0DE416A" AnswerProperty="Checked" Control="rei:REIASPRadioButton" ValidationID="AEQ9">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ9" />
+            <Attribute Name="Name" Value="Yes" />
+            <Attribute Name="Text" Value="Yes" />
+          </Attributes>
+        </Field>
+        <Field FieldId="51BAF8B1-ED0A-4D80-9338-C8EB3F999BC0" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ9" />
+            <Attribute Name="Name" Value="No" />
+            <Attribute Name="Text" Value="No" />
+          </Attributes>
+        </Field>
+        <Field FieldId="BFBA8A7E-C847-4C33-A947-B81871BA8350" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ9" />
+            <Attribute Name="Name" Value="N/A" />
+            <Attribute Name="Text" Value="N/A" />
+          </Attributes>
+        </Field>
+        <Field FieldId="0DA148EA-0290-4ECE-8ACD-A958381016D0" Description="If No, please provide comments" Control="rei:REIASPLabel" />
+        <Field FieldId="2C87B640-C450-4607-A32D-8A112259D905" AnswerProperty="Text" Control="rei:RichTextBoxView">
+          <Attributes>
+            <Attribute Name="TextMode" Value="MultiLine" />
+            <Attribute Name="DisplayCharacterCountLabel" Value="True" />
+            <Attribute Name="Rows" Value="5" />
+            <Attribute Name="MaxLength" Value="1000" />
+            <Attribute Name="ReplaceCarriageReturns" Value="false" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+    <Question QuestionId="E207B729-1DB4-4A79-9C5F-85409AD991FB" Description="Project Categorization" Required="true" TableName="Header" />
+    <Question QuestionId="E3DF02D2-58CB-45B5-BF71-4D533B183F76" Description="10.  Does the project consist of minor alteration/renovation work? (i.e., the total project cost is less than $500,000 and no “New Construction” activities are proposed)" Required="true">
+      <Fields>
+        <Field FieldId="CC953BB9-85B4-42A1-A42B-E3EEDFE3AC9D" AnswerProperty="Checked" Control="rei:REIASPRadioButton" ValidationID="AEQ10">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ10" />
+            <Attribute Name="Name" Value="Yes" />
+            <Attribute Name="Text" Value="Yes" />
+          </Attributes>
+        </Field>
+        <Field FieldId="FC15E4DC-A815-4B3C-AC0D-27A3E5982EB4" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ10" />
+            <Attribute Name="Name" Value="No" />
+            <Attribute Name="Text" Value="No" />
+          </Attributes>
+        </Field>
+        <Field FieldId="93A5210F-B857-467C-A088-454BB690BD66" AnswerProperty="Checked" Control="rei:REIASPRadioButton">
+          <Attributes>
+            <Attribute Name="GroupName" Value="GroupQ10" />
+            <Attribute Name="Name" Value="N/A" />
+            <Attribute Name="Text" Value="N/A" />
+          </Attributes>
+        </Field>
+        <Field FieldId="5848F819-64EC-402A-83A4-72F00E890648" Description="If No, please provide comments" Control="rei:REIASPLabel" />
+        <Field FieldId="B87F76F6-0BF7-4D15-88FD-7D77D45BCDAB" AnswerProperty="Text" Control="rei:RichTextBoxView">
+          <Attributes>
+            <Attribute Name="TextMode" Value="MultiLine" />
+            <Attribute Name="DisplayCharacterCountLabel" Value="True" />
+            <Attribute Name="Rows" Value="5" />
+            <Attribute Name="MaxLength" Value="1000" />
+            <Attribute Name="ReplaceCarriageReturns" Value="false" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+    <Question QuestionId="A47C00AB-A5DB-4401-AF66-AE2A8F10CC1A" Description="Project Description" Required="true" TableName="Header" />
+    <Question QuestionId="9347B8D1-ED42-40A4-B7FA-1727EF6FA6E0" Description="11. Provide project description. Within the project description, provide the following:" Required="true">
+      <Fields>
+        <Field FieldId="9A954683-DE85-4980-9818-FC1BC11811A1" Description="• A clear identification of the applicant and the specific facility affected by the project;" Control="rei:REIASPLabel" />
+        <Field FieldId="B3221BE7-3C9A-49A9-B784-0C74F07A7B11" Description="• A notation of the affected square footage within the total square footage;" Control="rei:REIASPLabel" />
+        <Field FieldId="47AACE80-6827-4827-AF8D-06BC6230F426" Description="• A description of the physical project; and " Control="rei:REIASPLabel" />
+        <Field FieldId="29F42EFC-DE3C-4B7F-9438-DA3B4E5FA0E6" Description="• A statement of the qualitative value to be achieved by the project." Control="rei:REIASPLabel" />
+        <Field FieldId="627FE067-C3C3-4AF0-9353-3CCB3B684A0A" AnswerProperty="Text" Control="rei:RichTextBoxView" ValidationID="AEQ11">
+          <Attributes>
+            <Attribute Name="TextMode" Value="MultiLine" />
+            <Attribute Name="DisplayCharacterCountLabel" Value="True" />
+            <Attribute Name="Rows" Value="5" />
+            <Attribute Name="MaxLength" Value="8000" />
+            <Attribute Name="ReplaceCarriageReturns" Value="false" />
+          </Attributes>
+        </Field>
+      </Fields>
+    </Question>
+  </Questions>
+</Checklist>'
+DECLARE @ValidationXml xml SET @ValidationXml = '<validations>
+  <cRule id="IfNotCheckedQ1" name="first" vCode="OR" validationPlaceHolder="AEQ1" message="Select an answer." pass="YES">
+    <sRule id="39396845-7995-4C54-84E5-3737B427E07D" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="9DB6842B-3BBC-4559-BECE-66CBE5D25C9D" vCode="EQ" CompareValue="True" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ1" name="first" vCode="THEN" validationPlaceHolder="AEQ1" message="Provide comments since you have selected 'No'." pass="YES">
+    <sRule id="9DB6842B-3BBC-4559-BECE-66CBE5D25C9D" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="0015544A-011D-4E9B-9465-5727146FA9DA" vCode="NE" CompareValue="" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ1" name="first" vCode="THEN" validationPlaceHolder="AEQ1" message="Provide comments only up to 1000 characters." pass="YES">
+    <sRule id="0015544A-011D-4E9B-9465-5727146FA9DA" vCode="NE" CompareValue="" empty="NO" pass="YES" editCode="" />
+    <sRule id="0015544A-011D-4E9B-9465-5727146FA9DA" vCode="MAXLEN" CompareValue="1000" empty="YES" pass="YES" editCode="" />
+  </cRule>
+  <cRule id="IfNotCheckedQ2" name="second" vCode="OR" validationPlaceHolder="AEQ2" message="Select an answer." pass="YES">
+    <sRule id="99A72289-6CFA-4525-B662-F6479E3EA5F0" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="F4860997-B6EF-48BB-B22E-F57A2AF375D7" vCode="EQ" CompareValue="True" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ2" name="second" vCode="THEN" validationPlaceHolder="AEQ2" message="Provide comments since you have selected 'No'." pass="YES">
+    <sRule id="F4860997-B6EF-48BB-B22E-F57A2AF375D7" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="45ED1B32-BC2F-410A-8118-DCB3995C08D4" vCode="NE" CompareValue="" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ2" name="second" vCode="THEN" validationPlaceHolder="AEQ2" message="Provide comments only up to 1000 characters." pass="YES">
+    <sRule id="45ED1B32-BC2F-410A-8118-DCB3995C08D4" vCode="NE" CompareValue="" empty="NO" pass="YES" editCode="" />
+    <sRule id="45ED1B32-BC2F-410A-8118-DCB3995C08D4" vCode="MAXLEN" CompareValue="1000" empty="YES" pass="YES" editCode="" />
+  </cRule>
+  <cRule id="IfNotCheckedQ3" name="third" vCode="OR" validationPlaceHolder="AEQ3" message="Select an answer." pass="YES">
+    <sRule id="E83E8BEC-C616-4050-A5C8-3E7CCCF69559" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="E3C74409-BC27-4A4D-9210-826A65A91509" vCode="EQ" CompareValue="True" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ3" name="third" vCode="THEN" validationPlaceHolder="AEQ3" message="Provide comments since you have selected 'No'." pass="YES">
+    <sRule id="E3C74409-BC27-4A4D-9210-826A65A91509" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="5878F511-CBC5-47CF-B2B2-EDAD2F773715" vCode="NE" CompareValue="" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ3" name="third" vCode="THEN" validationPlaceHolder="AEQ3" message="Provide comments only up to 1000 characters." pass="YES">
+    <sRule id="5878F511-CBC5-47CF-B2B2-EDAD2F773715" vCode="NE" CompareValue="" empty="NO" pass="YES" editCode="" />
+    <sRule id="5878F511-CBC5-47CF-B2B2-EDAD2F773715" vCode="MAXLEN" CompareValue="1000" empty="YES" pass="YES" editCode="" />
+  </cRule>
+  <cRule id="IfNotCheckedQ4" name="fourth" vCode="OR" validationPlaceHolder="AEQ4" message="Select an answer." pass="YES">
+    <sRule id="DAD84F03-8320-4AE0-8D30-AEB88701E2D9" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="05E20752-EFC6-4721-BCEC-AA2403916782" vCode="EQ" CompareValue="True" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ4" name="fourth" vCode="THEN" validationPlaceHolder="AEQ4" message="Provide comments since you have selected 'No'." pass="YES">
+    <sRule id="05E20752-EFC6-4721-BCEC-AA2403916782" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="A04B084D-9639-4722-B3D7-234EC256CB2A" vCode="NE" CompareValue="" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ4" name="fourth" vCode="THEN" validationPlaceHolder="AEQ4" message="Provide comments only up to 1000 characters." pass="YES">
+    <sRule id="A04B084D-9639-4722-B3D7-234EC256CB2A" vCode="NE" CompareValue="" empty="NO" pass="YES" editCode="" />
+    <sRule id="A04B084D-9639-4722-B3D7-234EC256CB2A" vCode="MAXLEN" CompareValue="1000" empty="YES" pass="YES" editCode="" />
+  </cRule>
+  <cRule id="IfNotCheckedQ5" name="fifth" vCode="OR" validationPlaceHolder="AEQ5" message="Select an answer." pass="YES">
+    <sRule id="D169E50E-A702-40BA-8B64-58DDF257179C" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="284DC241-233B-4EC3-9F6A-9B753E95FBB5" vCode="EQ" CompareValue="True" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ5" name="fifth" vCode="THEN" validationPlaceHolder="AEQ5" message="Provide comments since you have selected 'No'." pass="YES">
+    <sRule id="284DC241-233B-4EC3-9F6A-9B753E95FBB5" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="BC530CB2-8B30-4E67-8593-453D44D3B4D1" vCode="NE" CompareValue="" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ5" name="fifth" vCode="THEN" validationPlaceHolder="AEQ5" message="Provide comments only up to 1000 characters." pass="YES">
+    <sRule id="BC530CB2-8B30-4E67-8593-453D44D3B4D1" vCode="NE" CompareValue="" empty="NO" pass="YES" editCode="" />
+    <sRule id="BC530CB2-8B30-4E67-8593-453D44D3B4D1" vCode="MAXLEN" CompareValue="1000" empty="YES" pass="YES" editCode="" />
+  </cRule>
+  <cRule id="IfNotCheckedQ6" name="sixth" vCode="OR" validationPlaceHolder="AEQ6" message="Select an answer." pass="YES">
+    <sRule id="9681B3E7-4303-4E7D-8106-9903AB261729" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="B22C60F1-B6EC-46F7-B283-0A5C3F80316A" vCode="EQ" CompareValue="True" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ6" name="sixth" vCode="THEN" validationPlaceHolder="AEQ6" message="Provide comments since you have selected 'No'." pass="YES">
+    <sRule id="B22C60F1-B6EC-46F7-B283-0A5C3F80316A" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="76759FDC-CAA5-4977-8CD4-4DC8460D2463" vCode="NE" CompareValue="" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ6" name="sixth" vCode="THEN" validationPlaceHolder="AEQ6" message="Provide comments only up to 1000 characters." pass="YES">
+    <sRule id="76759FDC-CAA5-4977-8CD4-4DC8460D2463" vCode="NE" CompareValue="" empty="NO" pass="YES" editCode="" />
+    <sRule id="76759FDC-CAA5-4977-8CD4-4DC8460D2463" vCode="MAXLEN" CompareValue="1000" empty="YES" pass="YES" editCode="" />
+  </cRule>
+  <cRule id="IfNotCheckedQ7" name="seventh" vCode="OR" validationPlaceHolder="AEQ7" message="Select an answer." pass="YES">
+    <sRule id="AA9EE00F-29B4-47AB-BD5D-EF63C9F2156B" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="CA069FB5-9E56-4402-949E-51A164293D69" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="B9368F30-9C60-4C0E-A84B-03F0AC4D4220" vCode="EQ" CompareValue="True" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ8" name="eighth" vCode="OR" validationPlaceHolder="AEQ8" message="Select an answer." pass="YES">
+    <sRule id="A14E4AC6-222C-44E2-8BD0-997A5F5E1055" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="94869E4C-B073-47C0-8B16-884BA2DC7A75" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="43847CB6-F172-4EF8-BD8B-0F31F00E2EB7" vCode="EQ" CompareValue="True" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ9" name="ninth" vCode="OR" validationPlaceHolder="AEQ9" message="Select an answer." pass="YES">
+    <sRule id="BC3C044B-FD19-4DC1-B141-7492D0DE416A" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="51BAF8B1-ED0A-4D80-9338-C8EB3F999BC0" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="BFBA8A7E-C847-4C33-A947-B81871BA8350" vCode="EQ" CompareValue="True" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ9" name="ninth" vCode="THEN" validationPlaceHolder="AEQ9" message="Provide comments since you have selected 'No'." pass="YES">
+    <sRule id="51BAF8B1-ED0A-4D80-9338-C8EB3F999BC0" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="2C87B640-C450-4607-A32D-8A112259D905" vCode="NE" CompareValue="" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ9" name="ninth" vCode="THEN" validationPlaceHolder="AEQ9" message="Provide comments only up to 1000 characters." pass="YES">
+    <sRule id="2C87B640-C450-4607-A32D-8A112259D905" vCode="NE" CompareValue="" empty="NO" pass="YES" editCode="" />
+    <sRule id="2C87B640-C450-4607-A32D-8A112259D905" vCode="MAXLEN" CompareValue="1000" empty="YES" pass="YES" editCode="" />
+  </cRule>
+  <cRule id="IfNotCheckedQ10" name="tenth" vCode="OR" validationPlaceHolder="AEQ10" message="Select an answer." pass="YES">
+    <sRule id="CC953BB9-85B4-42A1-A42B-E3EEDFE3AC9D" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="FC15E4DC-A815-4B3C-AC0D-27A3E5982EB4" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="93A5210F-B857-467C-A088-454BB690BD66" vCode="EQ" CompareValue="True" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ10" name="tenth" vCode="THEN" validationPlaceHolder="AEQ10" message="Provide comments since you have selected 'No'." pass="YES">
+    <sRule id="FC15E4DC-A815-4B3C-AC0D-27A3E5982EB4" vCode="EQ" CompareValue="True" empty="NO" />
+    <sRule id="B87F76F6-0BF7-4D15-88FD-7D77D45BCDAB" vCode="NE" CompareValue="" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ10" name="tenth" vCode="THEN" validationPlaceHolder="AEQ10" message="Provide comments only up to 1000 characters." pass="YES">
+    <sRule id="B87F76F6-0BF7-4D15-88FD-7D77D45BCDAB" vCode="NE" CompareValue="" empty="NO" pass="YES" editCode="" />
+    <sRule id="B87F76F6-0BF7-4D15-88FD-7D77D45BCDAB" vCode="MAXLEN" CompareValue="1000" empty="YES" pass="YES" editCode="" />
+  </cRule>
+  <cRule id="IfNotCheckedQ11" name="eleventh" vCode="AND" validationPlaceHolder="AEQ11" message="Provide description." pass="YES">
+    <sRule id="627FE067-C3C3-4AF0-9353-3CCB3B684A0A" vCode="NE" CompareValue="" empty="NO" />
+  </cRule>
+  <cRule id="IfNotCheckedQ11" name="eleventh" vCode="THEN" validationPlaceHolder="AEQ11" message="Provide comments only up to 8000 characters." pass="YES">
+    <sRule id="627FE067-C3C3-4AF0-9353-3CCB3B684A0A" vCode="NE" CompareValue="" empty="NO" pass="YES" editCode="" />
+    <sRule id="627FE067-C3C3-4AF0-9353-3CCB3B684A0A" vCode="MAXLEN" CompareValue="8000" empty="YES" pass="YES" editCode="" />
+  </cRule>
+</validations>'
+
+INSERT INTO [GRM_RVW_Definition_P] ([ReviewDefinitionId],[Name],[Description],[ReviewTypeCode],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@ReviewDefinitionId,'A/E Review',@DisplayName,2,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_Definition_LU_GRM_AET_EntityType_R] ([RelReviewDefinitionEntityTypeId],[InstantiationConditionEvaluator],[EntityEvaluator],[Description],[ReviewDefinitionId],[AssociatedEntityTypeCode],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@RelReviewDefinitionEntityTypeId,'REISys.GRMN.Services,REISys.GRMN.Services.AET.InstantiationConditionEvaluator','REISys.GRMN.Services,REISys.GRMN.Services.AET.EntityIdsEvaluator',@DisplayName,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_AET_InstantiationCondition_P] ([InstantiationConditionId],[InstantiationConditionXml],[Description],[RelReviewDefinitionEntityTypeId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@InstantiationConditionId,@InstantiationConditionXml,@DisplayName,@RelReviewDefinitionEntityTypeId,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId5,@ReviewDefinitionId,'ApplicantStateValue','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId18,@ReviewDefinitionId,'ProjectName','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId25,@ReviewDefinitionId,'ApplicationId','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId11,@ReviewDefinitionId,'PreviousApplicationId','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId7,@ReviewDefinitionId,'Project.EHBApplicationId','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId28,@ReviewDefinitionId,'Project.ProjectId','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId15,@ReviewDefinitionId,'Project.ProjectTitle','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId13,@ReviewDefinitionId,'ApplicantName','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId1,@ReviewDefinitionId,'DeliverableId',NULL,0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId6,@ReviewDefinitionId,'Year1OneTimeBudgetTotal','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId12,@ReviewDefinitionId,'Project.ProjectTrackingNo','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId10,@ReviewDefinitionId,'FundingCycleName','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId17,@ReviewDefinitionId,'Project.ProjectVersionNo','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId8,@ReviewDefinitionId,'ApplicantCity','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId16,@ReviewDefinitionId,'Project.ProjectTypeCode','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId9,@ReviewDefinitionId,'AnnouncementNumber','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId21,@ReviewDefinitionId,'ApplicationStatusCode',NULL,0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId2,@ReviewDefinitionId,'ApplicationTrackingNumber','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId26,@ReviewDefinitionId,'GrantId',NULL,0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId20,@ReviewDefinitionId,'SubmissionStatus','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId19,@ReviewDefinitionId,'Project','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId24,@ReviewDefinitionId,'ActivityCode','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId14,@ReviewDefinitionId,'Project.federalAmountRequested','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId27,@ReviewDefinitionId,'Project.ProjectType','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId22,@ReviewDefinitionId,'ApplicationTypeCode','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId23,@ReviewDefinitionId,'FundingCycleId','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId4,@ReviewDefinitionId,'ApplicationVersionNo','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_FieldDefinition_P] ([FieldDefinitionId],[ReviewDefinitionId],[Name],[DefaultValue],[RequiredFlag],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@FieldDefinitionId3,@ReviewDefinitionId,'ApplicantState','N/A',0,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_AET_PrimaryObjectField_P] ([PrimaryObjectFieldId],[PrimaryObjectFieldDefinitionId],[ParentObjectFieldDefinitionId],[PrimaryObjectVersionFieldDefinitionId],[ParentObjectVersionFieldDefinitionId],[RelReviewDefinitionEntityTypeId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[Description],[PrimaryObjectCoreIdentifierFieldDefinitionId],[PrimaryHeaderDefinitionId],[ParentHeaderDefinitionId],[ActionHistoryFieldDefinitionId],[DefaultAssgmtResourceValueFieldDefinitionId],[DefaultAssgmtResourceTypeCodeFieldDefinitionId]) 
+VALUES(@PrimaryObjectFieldId,@FieldDefinitionId25,NULL,@FieldDefinitionId4,NULL,@RelReviewDefinitionEntityTypeId,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),@DisplayName,@FieldDefinitionId2,NULL,NULL,NULL,NULL,NULL) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId2,NULL,'ActionHistory','Action History','ED891AFA-E28D-4D63-BBAE-EB3FD594F958','rv={% Review %}&rtc=169&plc=3&hctrl=/UserControls/GenericHeaderControl.ascx&hctrlparam=StepInst={% Step %},disStat=false',1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId5,NULL,'Terms and Conditions','Terms and Conditions','3235E0B1-4275-4929-A623-51EBB19C9B7D',NULL,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId1,NULL,'ApplicationFolder','Application Folder','EAB276D7-F93B-43A4-A09F-BDF74B5A8900',NULL,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId6,NULL,'Application','Application','F9FB9F38-8018-4C59-80B5-899DE2FBD4EB','applicationid={{ ApplicationId }}&hv=Y&VersionId=0&FA=0&CallingObject=Review&wndMode=1',1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId3,NULL,'NEPA/HP Readonly Review','NEPA/HP Checklist','0B4B21A8-0E3E-41AF-8583-6D249B92C7EE','rvInst={% Review NEPA/HP Review %}',1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkDefinition_P] ([LinkDefinitionId],[ParentLinkDefinitionId],[Name],[DisplayText],[COREPreDefinedPageId],[Params],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkDefinitionId4,NULL,'A/E Readonly Review','A/E Checklist','FFDACBC0-56F4-443F-9E51-B4A85FF61C52',NULL,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkGroup_P] ([LinkGroupId],[Name],[UseResourceFlag],[DisplayHtml],[CSSFile],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@LinkGroupId1,@DisplayName,1,NULL,NULL,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES('@LinkGroupId_DefinitionId5',@LinkGroupId1,@LinkDefinitionId2,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,20) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES('@LinkGroupId_DefinitionId6',@LinkGroupId1,@LinkDefinitionId4,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,40) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES('@LinkGroupId_DefinitionId2',@LinkGroupId1,@LinkDefinitionId6,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,10) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES('@LinkGroupId_DefinitionId3',@LinkGroupId1,@LinkDefinitionId3,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,50) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES('@LinkGroupId_DefinitionId4',@LinkGroupId1,@LinkDefinitionId1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,30) 
+
+INSERT INTO [GRM_RVW_LinkGroup_GRM_RVW_LinkDefinition_R] ([LinkGroupDefinitionId],[LinkGroupId],[LinkDefinitionId],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[DisplayInHeaderFlag],[DisplayOrder]) 
+VALUES(@LinkGroupId_DefinitionId1,@LinkGroupId1,@LinkDefinitionId5,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),1,60) 
+
+INSERT INTO [ChecklistDefinition] ([ChecklistDefinitionId],[Version],[XSLTPath],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[ChecklistXML],[Description],[ReadonlyXSLTPath]) 
+VALUES(@ChecklistDefinitionId,1,'AEReviewChecklist/xslt','15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),@Checklistxml,@DisplayName,'AEReviewChecklist/xslt') 
+
+INSERT INTO [GRM_RVW_WorkFlowAPI_P] ([WorkflowAPIID],[ReviewDefinitionId],[DLLAssembly],[WorkflowDefinitionId],[RelatedObjectTypeCode],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate]) 
+VALUES(@WorkflowAPIId,@ReviewDefinitionId,'REISys.GRMN.Plugin.NAPWorkflow,REISys.GRMN.Plugin.NAPWorkflow.PreAwardNAPWorkflow','D6E8A466-B66D-4CD2-8A96-6BFA3DE760A6',169,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate()) 
+
+INSERT INTO [GRM_RVW_StepDefinition_P] ([StepDefinitionId],[ReviewDefinitionId],[Name],[EHBRoleId],[EHBTaskTypeCode],[TaskSLCOREPredefinedPageId],[COREPredefinedPageId],[ChecklistDefinitionId],[ChecklistVersionId],[CSSFile],[SharedDecisionNumber],[SharedCommentNumber],[SharedChecklistNumber],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[PageActionGroupId],[DecisionGroupId],[LinkGroupId],[ValidationXml],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[TaskSLTitle],[ReviewTitle],[HeaderDefinitionId],[EHBPrivilegeId],[AuthorizationXML],[DisableUserSelectionFlag],[ConfirmPageLayoutNoteText],[ConfirmPageLayoutConfirmText],[HideRequiredCommentMessageFlag]) 
+VALUES(@StepDefinitionId1,@ReviewDefinitionId,@DisplayName + ' A/E Assign Analyst',143,457,'E8424B68-016E-4F8C-961A-DB84B8AA6810','FB331C80-51DF-49B1-8FCB-48666CBD3FCA',NULL,NULL,NULL,NULL,NULL,NULL,1,@ReviewDefinitionId,1,'AFA38D6F-2867-4A1A-A2BC-EB1D18CF4117',NULL,@LinkGroupId1,NULL,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'A/E Review - Assign Checklist','A/E Review - Assign Checklist',@HeaderDefinitionId,NULL,NULL,NULL,NULL,NULL,NULL) 
+
+INSERT INTO [GRM_RVW_StepDefinition_P] ([StepDefinitionId],[ReviewDefinitionId],[Name],[EHBRoleId],[EHBTaskTypeCode],[TaskSLCOREPredefinedPageId],[COREPredefinedPageId],[ChecklistDefinitionId],[ChecklistVersionId],[CSSFile],[SharedDecisionNumber],[SharedCommentNumber],[SharedChecklistNumber],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[PageActionGroupId],[DecisionGroupId],[LinkGroupId],[ValidationXml],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[TaskSLTitle],[ReviewTitle],[HeaderDefinitionId],[EHBPrivilegeId],[AuthorizationXML],[DisableUserSelectionFlag],[ConfirmPageLayoutNoteText],[ConfirmPageLayoutConfirmText],[HideRequiredCommentMessageFlag]) 
+VALUES(@StepDefinitionId2,@ReviewDefinitionId,@DisplayName + ' A/E Analyst Review',143,455,'E8424B68-016E-4F8C-961A-DB84B8AA6810','BF14D57F-D2F8-4B84-B47F-AC6628B808EE',@ChecklistDefinitionId,1,NULL,1,2,1,1,@ReviewDefinitionId,1,'AFA38D6F-2867-4A1A-A2BC-EB1D18CF4117','862B61EA-B2A8-4225-8A02-24F13683FA5F',@LinkGroupId1,@ValidationXml,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'A/E Review - Prepare Checklist','A/E Review - Checklist',@HeaderDefinitionId,NULL,NULL,NULL,NULL,NULL,NULL) 
+
+INSERT INTO [GRM_RVW_StepDefinition_P] ([StepDefinitionId],[ReviewDefinitionId],[Name],[EHBRoleId],[EHBTaskTypeCode],[TaskSLCOREPredefinedPageId],[COREPredefinedPageId],[ChecklistDefinitionId],[ChecklistVersionId],[CSSFile],[SharedDecisionNumber],[SharedCommentNumber],[SharedChecklistNumber],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[PageActionGroupId],[DecisionGroupId],[LinkGroupId],[ValidationXml],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[TaskSLTitle],[ReviewTitle],[HeaderDefinitionId],[EHBPrivilegeId],[AuthorizationXML],[DisableUserSelectionFlag],[ConfirmPageLayoutNoteText],[ConfirmPageLayoutConfirmText],[HideRequiredCommentMessageFlag]) 
+VALUES(@StepDefinitionId3,@ReviewDefinitionId,@DisplayName + ' A/E Request Change',143,456,'E8424B68-016E-4F8C-961A-DB84B8AA6810','BF14D57F-D2F8-4B84-B47F-AC6628B808EE',@ChecklistDefinitionId,1,NULL,1,1,1,1,@ReviewDefinitionId,1,'AFA38D6F-2867-4A1A-A2BC-EB1D18CF4117','862B61EA-B2A8-4225-8A02-24F13683FA5F',@LinkGroupId1,@ValidationXml,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'A/E Review - Change Request','A/E Review - Checklist',@HeaderDefinitionId,NULL,NULL,NULL,NULL,NULL,NULL) 
+
+INSERT INTO [GRM_RVW_StepDefinition_P] ([StepDefinitionId],[ReviewDefinitionId],[Name],[EHBRoleId],[EHBTaskTypeCode],[TaskSLCOREPredefinedPageId],[COREPredefinedPageId],[ChecklistDefinitionId],[ChecklistVersionId],[CSSFile],[SharedDecisionNumber],[SharedCommentNumber],[SharedChecklistNumber],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[PageActionGroupId],[DecisionGroupId],[LinkGroupId],[ValidationXml],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[TaskSLTitle],[ReviewTitle],[HeaderDefinitionId],[EHBPrivilegeId],[AuthorizationXML],[DisableUserSelectionFlag],[ConfirmPageLayoutNoteText],[ConfirmPageLayoutConfirmText],[HideRequiredCommentMessageFlag]) 
+VALUES(@StepDefinitionId4,@ReviewDefinitionId,@DisplayName + ' A/E PO Review',142,458,'E8424B68-016E-4F8C-961A-DB84B8AA6810','BF14D57F-D2F8-4B84-B47F-AC6628B808EE',@ChecklistDefinitionId,1,NULL,1,3,1,1,@ReviewDefinitionId,1,'8F4C55DE-F311-4927-B9D3-E62983359964','862B61EA-B2A8-4225-8A02-24F13683FA5F',@LinkGroupId1,@ValidationXml,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'A/E Review - Prepare Checklist','A/E Review - Checklist',@HeaderDefinitionId,NULL,NULL,NULL,NULL,NULL,NULL) 
+
+INSERT INTO [GRM_RVW_HeaderDefinition_P] ([HeaderDefinitionId],[Name],[DisplayHtml],[CSSFile],[PublishedFlag],[DefinitionIdentifier],[VersionNumber],[CreatorId],[CreatedDate],[LastUpdateId],[LastUpdateDate],[HeaderTitle]) 
+VALUES(@HeaderDefinitionId,'A/E Review','<table width="100%">
+	<tr>
+		<td>
+			<b>Project Tracking Number:</b> {% Field Project.ProjectTrackingNo%}</td>
+		<td>
+			<b>Project Name:</b> {% Field Project.ProjectTitle %}</td>
+		<td>
+			<b>Project Type:</b> {% Field Project.ProjectType %}</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Announcement Number:</b> {{AnnouncementNumber}}</td>
+		<td>
+			<b>State:</b> {{ApplicantStateValue}}</td>
+	</tr>
+	<tr>
+		<td>
+			<b>Activity Code:</b> {{ActivityCode}}</td>
+	</tr>
+</table>',NULL,1,@ReviewDefinitionId,1,'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'15D6996D-1FA4-4345-980E-68BBA850E25F',getdate(),'{{ApplicationTrackingNumber}}: {{ApplicantName}}') 
+
